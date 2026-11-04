@@ -1,0 +1,329 @@
+{
+  "id": "lockmypdf",
+  "name": "lockmypdf",
+  "upgradeCode": "EA00C367-7270-4C50-9D8B-A7A5C88AD27F",
+  "sources": [
+    "lockmypdf.wxs",
+    "installer-ui.wxs"
+  ],
+  "icon": "assets/app-icon/lockmypdf.ico",
+  "localization": [],
+  "extensions": [],
+  "payloads": [
+    "LICENSE-APACHE",
+    "LICENSE-MIT",
+    "LICENSE-document.txt",
+    "NOTICE",
+    "lockmypdf-cli.exe",
+    "lockmypdf.exe"
+  ],
+  "registry": [
+    [
+      "-1",
+      "Software\\Microsoft\\Windows\\CurrentVersion\\App Paths\\lockmypdf.exe",
+      "",
+      "[#LockMyPdfExe]"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\lockmypdf.Document",
+      "",
+      "PDF Document"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\lockmypdf.Document\\DefaultIcon",
+      "",
+      "\"[#LockMyPdfExe]\",-2"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\lockmypdf.Document\\shell\\open\\command",
+      "",
+      "\"[#LockMyPdfExe]\" \"%1\""
+    ],
+    [
+      "-1",
+      "Software\\Classes\\lockmypdf.Document",
+      "TypeOverlay",
+      ""
+    ],
+    [
+      "-1",
+      "Software\\Classes\\.pdf\\OpenWithProgids",
+      "lockmypdf.Document",
+      ""
+    ],
+    [
+      "-1",
+      "Software\\Classes\\Applications\\lockmypdf.exe",
+      "FriendlyAppName",
+      "lockmypdf"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\Applications\\lockmypdf.exe\\DefaultIcon",
+      "",
+      "\"[#LockMyPdfExe]\",-2"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\Applications\\lockmypdf.exe\\SupportedTypes",
+      ".pdf",
+      ""
+    ],
+    [
+      "-1",
+      "Software\\Classes\\Applications\\lockmypdf.exe\\shell\\open\\command",
+      "",
+      "\"[#LockMyPdfExe]\" \"%1\""
+    ],
+    [
+      "-1",
+      "Software\\lockmypdf\\Capabilities",
+      "ApplicationName",
+      "lockmypdf"
+    ],
+    [
+      "-1",
+      "Software\\lockmypdf\\Capabilities",
+      "ApplicationDescription",
+      "Open-source PDF workbench"
+    ],
+    [
+      "-1",
+      "Software\\lockmypdf\\Capabilities",
+      "ApplicationIcon",
+      "[#LockMyPdfExe],0"
+    ],
+    [
+      "-1",
+      "Software\\lockmypdf\\Capabilities\\FileAssociations",
+      ".pdf",
+      "lockmypdf.Document"
+    ],
+    [
+      "-1",
+      "Software\\RegisteredApplications",
+      "lockmypdf",
+      "Software\\lockmypdf\\Capabilities"
+    ],
+    [
+      "-1",
+      "Software\\lockmypdf\\Shortcuts",
+      "StartMenu",
+      "#1"
+    ],
+    [
+      "-1",
+      "Software\\lockmypdf\\Shortcuts",
+      "Desktop",
+      "#1"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.pdf\\shell\\lockmypdf.Edit",
+      "",
+      "Edit with lockmypdf"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.pdf\\shell\\lockmypdf.Edit",
+      "Icon",
+      "\"[#LockMyPdfExe]\",0"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.pdf\\shell\\lockmypdf.Edit",
+      "MultiSelectModel",
+      "Document"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.pdf\\shell\\lockmypdf.Edit\\command",
+      "",
+      "\"[#LockMyPdfExe]\" \"%1\""
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.png\\shell\\lockmypdf.CreatePdf",
+      "",
+      "Create PDF with lockmypdf\u2026"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.png\\shell\\lockmypdf.CreatePdf",
+      "MultiSelectModel",
+      "Single"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.png\\shell\\lockmypdf.CreatePdf\\command",
+      "",
+      "\"[#LockMyPdfExe]\" --create-images \"%1\""
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.jpg\\shell\\lockmypdf.CreatePdf",
+      "",
+      "Create PDF with lockmypdf\u2026"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.jpg\\shell\\lockmypdf.CreatePdf",
+      "MultiSelectModel",
+      "Single"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.jpg\\shell\\lockmypdf.CreatePdf\\command",
+      "",
+      "\"[#LockMyPdfExe]\" --create-images \"%1\""
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.jpeg\\shell\\lockmypdf.CreatePdf",
+      "",
+      "Create PDF with lockmypdf\u2026"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.jpeg\\shell\\lockmypdf.CreatePdf",
+      "MultiSelectModel",
+      "Single"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.jpeg\\shell\\lockmypdf.CreatePdf\\command",
+      "",
+      "\"[#LockMyPdfExe]\" --create-images \"%1\""
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.tif\\shell\\lockmypdf.CreatePdf",
+      "",
+      "Create PDF with lockmypdf\u2026"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.tif\\shell\\lockmypdf.CreatePdf",
+      "MultiSelectModel",
+      "Single"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.tif\\shell\\lockmypdf.CreatePdf\\command",
+      "",
+      "\"[#LockMyPdfExe]\" --create-images \"%1\""
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.tiff\\shell\\lockmypdf.CreatePdf",
+      "",
+      "Create PDF with lockmypdf\u2026"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.tiff\\shell\\lockmypdf.CreatePdf",
+      "MultiSelectModel",
+      "Single"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.tiff\\shell\\lockmypdf.CreatePdf\\command",
+      "",
+      "\"[#LockMyPdfExe]\" --create-images \"%1\""
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.gif\\shell\\lockmypdf.CreatePdf",
+      "",
+      "Create PDF with lockmypdf\u2026"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.gif\\shell\\lockmypdf.CreatePdf",
+      "MultiSelectModel",
+      "Single"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.gif\\shell\\lockmypdf.CreatePdf\\command",
+      "",
+      "\"[#LockMyPdfExe]\" --create-images \"%1\""
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.bmp\\shell\\lockmypdf.CreatePdf",
+      "",
+      "Create PDF with lockmypdf\u2026"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.bmp\\shell\\lockmypdf.CreatePdf",
+      "MultiSelectModel",
+      "Single"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.bmp\\shell\\lockmypdf.CreatePdf\\command",
+      "",
+      "\"[#LockMyPdfExe]\" --create-images \"%1\""
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.jp2\\shell\\lockmypdf.CreatePdf",
+      "",
+      "Create PDF with lockmypdf\u2026"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.jp2\\shell\\lockmypdf.CreatePdf",
+      "MultiSelectModel",
+      "Single"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.jp2\\shell\\lockmypdf.CreatePdf\\command",
+      "",
+      "\"[#LockMyPdfExe]\" --create-images \"%1\""
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.j2k\\shell\\lockmypdf.CreatePdf",
+      "",
+      "Create PDF with lockmypdf\u2026"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.j2k\\shell\\lockmypdf.CreatePdf",
+      "MultiSelectModel",
+      "Single"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.j2k\\shell\\lockmypdf.CreatePdf\\command",
+      "",
+      "\"[#LockMyPdfExe]\" --create-images \"%1\""
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.jpx\\shell\\lockmypdf.CreatePdf",
+      "",
+      "Create PDF with lockmypdf\u2026"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.jpx\\shell\\lockmypdf.CreatePdf",
+      "MultiSelectModel",
+      "Single"
+    ],
+    [
+      "-1",
+      "Software\\Classes\\SystemFileAssociations\\.jpx\\shell\\lockmypdf.CreatePdf\\command",
+      "",
+      "\"[#LockMyPdfExe]\" --create-images \"%1\""
+    ]
+  ],
+  "mode": "dualScope"
+}

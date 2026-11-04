@@ -1,0 +1,20 @@
+[package]
+name = "lockmypdf-measure"
+description = "Calibrated 2D PDF measurements, viewports and snapping"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+lockmypdf-cos = { workspace = true }
+lockmypdf-model = { workspace = true }
+lockmypdf-content = { workspace = true }
+lockmypdf-annot = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+lockmypdf-testkit = { workspace = true }

@@ -1,0 +1,19 @@
+[package]
+name = "lockmypdf-a11y"
+description = "Accessibility: the Accessibility Checker (32 rules), its report and fixes"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+lockmypdf-cos = { workspace = true }
+lockmypdf-model = { workspace = true }
+lockmypdf-content = { workspace = true }
+lockmypdf-filters = { workspace = true }
+lockmypdf-fonts = { workspace = true }
+thiserror.workspace = true

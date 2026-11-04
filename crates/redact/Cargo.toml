@@ -1,0 +1,25 @@
+[package]
+name = "lockmypdf-redact"
+description = "Redaction (architecture §11.2): marks, apply (glyphs, images, vectors, XObjects, annotations, fields), verification"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+lockmypdf-cos = { workspace = true }
+lockmypdf-content = { workspace = true }
+lockmypdf-fonts = { workspace = true }
+lockmypdf-model = { workspace = true }
+lockmypdf-forms = { workspace = true }
+lockmypdf-edit = { workspace = true }
+lockmypdf-annot = { workspace = true }
+lockmypdf-xfa = { workspace = true }
+# CCITT Group 4 and JBIG2 encoding for cleared one-bit images.
+lockmypdf-filters = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+lockmypdf-testkit = { workspace = true }
