@@ -1,0 +1,26 @@
+name: Web CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+          components: clippy, rustfmt
+      - uses: Swatinem/rust-cache@v2
+      - name: Check formatting
+        run: cargo fmt --all -- --check
+      - name: Clippy (WASM)
+        run: cargo clippy -p lockmypdf-web --target wasm32-unknown-unknown -- -D warnings
+      - name: Install Trunk
+        uses: jetli/trunk-action@v0.5.0
+      - name: Build Web App
+        working-directory: apps/lockmypdf-web
+        run: trunk build --release

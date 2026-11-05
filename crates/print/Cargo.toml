@@ -1,0 +1,19 @@
+[package]
+name = "lockmypdf-print"
+description = "Printing: page selection, sizing (fit, actual, shrink, custom), multiple pages per sheet, booklets, posters, comments & forms; print-ready PDF and the system spooler"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+craft-print = { workspace = true }
+lockmypdf-cos = { workspace = true }
+lockmypdf-content = { workspace = true }
+lockmypdf-model = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+lockmypdf-render = { workspace = true }

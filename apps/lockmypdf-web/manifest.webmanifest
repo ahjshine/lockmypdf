@@ -1,0 +1,67 @@
+{
+  "name": "LockMyPDF — Private PDF Workspace",
+  "short_name": "LockMyPDF",
+  "id": "ai.storyteller.lockmypdf",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#010101",
+  "theme_color": "#010101",
+  "description": "Private, local-first PDF workspace in your browser. Open, edit, organize, sign and protect documents without cloud hand-off.",
+  "categories": ["productivity", "utilities"],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "file_handlers": [
+    {
+      "action": "./",
+      "name": "PDF Document",
+      "accept": {
+        "application/pdf": [".pdf"]
+      }
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Open PDF",
+      "short_name": "Open",
+      "description": "Open a local PDF file privately",
+      "url": "./",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "lockmypdf.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

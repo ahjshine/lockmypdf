@@ -1,0 +1,63 @@
+[package]
+name = "lockmypdf-engine"
+description = "lockmypdf engine façade: session, documents, command/tool catalogue"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+craft-docpath = { workspace = true }
+lockmypdf-measure = { workspace = true }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "tiff"] }
+lockmypdf-render = { workspace = true }
+lockmypdf-cos = { workspace = true }
+lockmypdf-organize = { workspace = true }
+lockmypdf-annot = { workspace = true }
+lockmypdf-forms = { workspace = true }
+lockmypdf-xfa = { workspace = true }
+lockmypdf-edit = { workspace = true }
+lockmypdf-content = { workspace = true }
+lockmypdf-audit = { workspace = true }
+lockmypdf-redact = { workspace = true }
+lockmypdf-print = { workspace = true }
+lockmypdf-xfdf = { workspace = true }
+lockmypdf-sign = { workspace = true }
+lockmypdf-optimize = { workspace = true }
+lockmypdf-a11y = { workspace = true }
+lockmypdf-ocr = { workspace = true }
+lockmypdf-js = { workspace = true }
+lockmypdf-compare = { workspace = true }
+lockmypdf-preflight = { workspace = true }
+lockmypdf-export = { workspace = true }
+lockmypdf-fonts = { workspace = true }
+lockmypdf-create = { workspace = true }
+lockmypdf-model = { workspace = true }
+lockmypdf-geom = { workspace = true }
+thiserror = { workspace = true }
+png = "0.18"
+# Already in the graph (through image and lockmypdf-create): image's TiffEncoder can't set the
+# resolution or the compression of an exported page.
+tiff = "0.11"
+# Already in the graph (url and idna through webbrowser, icu_properties through boa): they show
+# the host of a document's link the way the browser reads it (links::display_host).
+url = "2.5"
+idna = "1.1"
+icu_properties = "2.3"
+unicode-segmentation = "1.13"
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+# Already in the graph through lopdf; used only for the local UTC offset ("today"). The workspace
+# entry is std-only; this target adds `clock` for `chrono::Local::now`.
+chrono = { workspace = true, features = ["clock"] }
+getrandom = "0.4"
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+getrandom = { version = "0.4", features = ["wasm_js"] }
+
+[dev-dependencies]
+lockmypdf-testkit = { workspace = true }
+# JBIG2 fixtures (`encode_jbig2_generic`).
+lockmypdf-filters = { workspace = true }

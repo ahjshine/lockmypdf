@@ -1,0 +1,18 @@
+[package]
+name = "lockmypdf-organize"
+description = "Page and document-structure edits: rotate, delete, move, insert pages; document info"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+lockmypdf-content = { workspace = true }
+lockmypdf-cos = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+lockmypdf-oracle = { workspace = true }
+hayro-syntax = { workspace = true }
